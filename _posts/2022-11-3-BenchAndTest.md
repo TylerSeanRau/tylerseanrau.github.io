@@ -105,7 +105,7 @@ TEST(do_something, CorrectSize)
 
 ### Benchmarking
 
-For benchmarking we can add another simple test.
+For benchmarking we can add another simple file.
 
 `source_code.benchmark.cpp`
 
@@ -125,6 +125,12 @@ static void BM_do_something(benchmark::State & state)
 
 BENCHMARK(BM_do_something);
 ```
+
+(4/13/2025 Note, this code is not a real benchmark that does anything
+meaningful. Check documentation before using
+`benchmark::DoNotOptimize` and `benchmark::ClobberMemory`.
+At the time of adding this note, the documentation for these is
+[here](https://github.com/google/benchmark/blob/main/docs/user_guide.md#:~:text=not%20set%20explicitly.-,Preventing%20Optimization,-To%20prevent%20a))
 
 ## Joining everything with `cmake`!
 
